@@ -69,12 +69,9 @@ public class Bitacora {
 	@Column(name = "accion")
 	private String accion;
 
-	@Column(name = "fecha")
-	private Date fecha;
-
 	public Bitacora(Long id, String tclave, String caja, int idTurno, int idTicket, int iclave, int pclave, String icb,
 			int estatus, int userId, Double monto, String referencia, String folio, String folioProv, String respProv,
-			Date fechaInicio, Date fechaActualizacion, Date fechaFin, String accion, Date fecha) {
+			Date fechaInicio, Date fechaActualizacion, Date fechaFin, String accion) {
 		super();
 		this.id = id;
 		this.tclave = tclave;
@@ -95,7 +92,6 @@ public class Bitacora {
 		this.fechaActualizacion = fechaActualizacion;
 		this.fechaFin = fechaFin;
 		this.accion = accion;
-		this.fecha = fecha;
 	}
 
 	public Bitacora() {
@@ -252,14 +248,6 @@ public class Bitacora {
 
 	public void setAccion(String accion) {
 		this.accion = accion;
-	}
-
-	public Date getFecha() {
-		return fecha;
-	}
-
-	public void setFecha(Date fecha) {
-		this.fecha = fecha;
 	}
 
 }
